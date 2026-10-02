@@ -1,0 +1,24 @@
+# ============================================================
+# 换行符与二进制标记
+#
+# 背景：本机全局 git 配置为 core.autocrlf=input，提交时会把 CRLF 归一成 LF。
+#   · 源码统一以 LF 入库是期望行为；
+#   · 但 Windows 批处理（.bat / .cmd）必须保留 CRLF，否则 cmd.exe 解析
+#     goto 标签与 setlocal 块会出错 —— gradle 官方的 gradlew.bat 就是 CRLF。
+# ============================================================
+
+# 文本文件统一以 LF 入库、以 LF 检出
+* text=auto eol=lf
+
+# Windows 脚本例外：必须保留 CRLF
+*.bat text eol=crlf
+*.cmd text eol=crlf
+
+# 二进制文件：禁止任何换行转换与文本 diff
+*.jar      binary
+*.wav      binary
+*.png      binary
+*.jpg      binary
+*.apk      binary
+*.jks      binary
+*.keystore binary
