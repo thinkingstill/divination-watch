@@ -1,0 +1,38 @@
+# ============================================================
+# 金钱卦手表端 App（wear_cast）
+# 本仓库为公开仓库，以下路径一律不入库。
+# ============================================================
+
+# ---- 本机路径 / IDE ----
+# local.properties 里的 sdk.dir 指向本机 Android SDK 绝对路径，会带出本机用户名，必须排除
+local.properties
+.idea/
+*.iml
+.DS_Store
+
+# ---- Gradle / Kotlin 构建缓存 ----
+.gradle/
+build/
+.kotlin/
+captures/
+
+# ---- 构建产物 ----
+*.apk
+*.aar
+*.ap_
+*.dex
+
+# ---- 签名材料：日后若启用 release 签名，一律不入库 ----
+*.jks
+*.keystore
+*.p12
+keystore.properties
+signing.properties
+
+# ---- 本项目工作区 ----
+# .workbuddy/ 是本机开发工作区（项目笔记与临时脚本），仅供本地使用，不对外公开
+.workbuddy/
+
+# ---- 崩溃与日志 ----
+*.hprof
+hs_err_pid*.log

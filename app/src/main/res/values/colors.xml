@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 国风配色（v0.3 §4.2.2）：墨底 + 铜金 + 朱砂 + 宣纸米白 -->
+    <color name="bg">#FF0B0D10</color>
+    <color name="surface">#FF14171C</color>
+    <color name="text_primary">#FFE8E2D4</color>
+    <color name="text_secondary">#FF8A93A0</color>
+    <color name="text_faint">#FF5A636F</color>
+
+    <!-- 主色：铜金 -->
+    <color name="coin">#FFC9A227</color>
+    <color name="coin_bright">#FFE0B33A</color>
+    <color name="coin_dim">#FF6B5A18</color>
+    <color name="coin_deep">#FF3A3212</color>
+
+    <!-- 强调色：朱砂（动爻 / 变卦） -->
+    <color name="cinnabar">#FFA8322A</color>
+
+    <!-- 宣纸米白 -->
+    <color name="paper">#FFE8E2D4</color>
+
+    <color name="line">#FFE8E2D4</color>
+    <color name="track">#FF232830</color>
+    <color name="ic_launcher_background">#FF0B0D10</color>
+</resources>

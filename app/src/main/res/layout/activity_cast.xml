@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg">
+
+    <!-- 顶部回纹带：圆表上按所在行弦宽自动收窄 -->
+    <com.wearcast.liuyao.view.MeanderBandView
+        android:id="@+id/bandTop"
+        android:layout_width="match_parent"
+        android:layout_height="7dp"
+        android:layout_gravity="top|center_horizontal"
+        android:layout_marginTop="1dp" />
+
+    <com.wearcast.liuyao.view.ProgressRingView
+        android:id="@+id/ring"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <LinearLayout
+        android:id="@+id/castColumn"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingLeft="4dp"
+        android:paddingTop="2dp"
+        android:paddingRight="4dp"
+        android:paddingBottom="2dp">
+
+        <TextView
+            android:id="@+id/progress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:textColor="@color/text_faint"
+            android:textSize="11sp" />
+
+        <!-- 抛掷区：三枚铜钱走六拍动画，落地线上方留白 -->
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <com.wearcast.liuyao.view.CoinTossView
+                android:id="@+id/coin"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/hint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="2dp"
+            android:gravity="center"
+            android:text="@string/cast_hint_idle"
+            android:textColor="@color/text_secondary"
+            android:textSize="12sp" />
+
+        <!-- 六爻堆叠区：自下而上生长。
+             宽度按传统卦象的瘦长比例定在 64×88dp（约 1:1.38），不再横贯全屏；
+             视图自身居中，右侧 11dp 留给动爻的 ○ / × 记号。 -->
+        <com.wearcast.liuyao.view.HexagramStackView
+            android:id="@+id/stack"
+            android:layout_width="64dp"
+            android:layout_height="88dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="2dp" />
+
+        <!-- 底部一行两个都说清楚：「取消」常驻，调试提示只在 debug 构建显示。
+             合到同一行是为了省下一整行高度留给抛掷区（铜钱因此能画大一圈）。 -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="2dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/btnCancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text="@string/cast_cancel"
+                android:textColor="@color/text_faint"
+                android:textSize="10sp" />
+
+            <TextView
+                android:id="@+id/debugHint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="6dp"
+                android:paddingRight="6dp"
+                android:text="@string/cast_debug_hint"
+                android:textColor="@color/text_faint"
+                android:textSize="9sp"
+                android:visibility="gone" />
+        </LinearLayout>
+    </LinearLayout>
+
+</FrameLayout>

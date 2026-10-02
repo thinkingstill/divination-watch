@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">金钱卦</string>
+
+    <!-- 首页：两个并列入口（v0.3 决策 9） -->
+    <string name="home_cast">起卦</string>
+    <string name="home_quick">一键</string>
+    <string name="home_immersive">沉浸</string>
+    <string name="home_quick_sub">摇一下</string>
+    <string name="home_immersive_sub">摇六次</string>
+    <string name="home_hint_default">选一种起卦方式</string>
+    <string name="home_hint_quick">一键起卦：摇一下就出卦</string>
+    <string name="home_hint_immersive">沉浸起卦：摇六次，一爻一爻来</string>
+    <string name="sound_on">音效 · 开</string>
+    <string name="sound_off">音效 · 关</string>
+
+    <!-- 摇卦页 -->
+    <string name="cast_hint_idle">用力摇晃手表</string>
+    <string name="cast_hint_confirm">轻摇手表确认起卦</string>
+    <string name="cast_hint_go">第 %1$d 爻 · 继续摇</string>
+    <string name="cast_hint_full">六爻已成</string>
+    <string name="cast_hint_timeout">太久了，请重新摇动</string>
+    <string name="cast_hint_settling">成卦…</string>
+    <string name="cast_progress">第 %1$d / 6 爻</string>
+    <string name="cast_mode_quick">一键起卦</string>
+    <string name="cast_mode_immersive">沉浸摇卦</string>
+    <string name="cast_cancel">取消</string>
+    <string name="cast_yao_fmt">%1$s · %2$s</string>
+
+    <!-- 结果页 -->
+    <string name="result_ben">本卦</string>
+    <string name="result_bian">变卦</string>
+    <string name="result_no_moving">六爻安静，无动爻</string>
+    <string name="result_gua_ci">卦辞</string>
+    <string name="result_yao_ci">动爻爻辞</string>
+    <string name="result_yao_ci_all">六爻爻辞</string>
+    <string name="result_duan_ci">断语</string>
+    <string name="result_duan_ci_todo">断语待补（本版只出经文原文）</string>
+    <string name="result_text_todo">经文待补</string>
+    <string name="result_again">再起一卦</string>
+    <string name="result_footer">传统文化娱乐用途，不作任何决策依据</string>
+
+    <!-- 爻题与背数 -->
+    <string name="backs_3">三背</string>
+    <string name="backs_2">两背一字</string>
+    <string name="backs_1">一背二字</string>
+    <string name="backs_0">三字</string>
+    <string name="cast_debug_hint">长按铜钱模拟出爻</string>
+</resources>
